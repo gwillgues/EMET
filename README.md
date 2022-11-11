@@ -1,6 +1,14 @@
 # EMET
 A list of Microsoft Enhanced Mitigation Experience Toolkit (EMET) related software/configurations, along with other notes
 
+You can apply these settings to your Windows system by running the following commands, or by running the ```install.ps1``` script. Note that both require Administrator privileges.
+
+```
+(New-Object System.Net.WebClient).DownloadFile("https://github.com/gwillgues/EMET/raw/main/win_proc_mitigations.xml", "C:\Windows\Temp\win_proc_mitigations.xml")
+
+Set-ProcessMitigation -PolicyFilePath "C:\Windows\Temp\win_proc_mitigations.xml"
+```
+
 
 # Location of EMET Process Mitigiation settings in Registry
 The location of the Process Mitigation settings can be found at 
@@ -19,12 +27,16 @@ You can get the list of events using PowerShell using the following command
 
 An example of a process action being blocked:
 
-```Process '\Device\HarddiskVolume1\Program Files\Microsoft Office\root\Office16\EXCEL.EXE' (PID 7000) was blocked from creating a child process 'C:\Program Files\Microsoft Office\root\Office16\ADDINS\Microsoft Power Query for Excel Integrated\bin\Microsoft.Mashup.Container.Loader.exe' with command line '"C:\Program Files\Microsoft Office\root\Office16\ADDINS\Microsoft Power Query for Excel Integrated\bin\Microsoft.Mashup.Container.Loader.exe" 7500 7496 55fa64db-5ed7-48e2-abe7-922d863949ad 1 --logfile "C:\Users\rootuser\AppData\Local\Temp\PowerQuery\ContainerLogs\3245bbd1-f910-4d5c-9f82-b039c8f41324.log" '. ```
+```
+Process '\Device\HarddiskVolume1\Program Files\Microsoft Office\root\Office16\EXCEL.EXE' (PID 7000) was blocked from creating a child process 'C:\Program Files\Microsoft Office\root\Office16\ADDINS\Microsoft Power Query for Excel Integrated\bin\Microsoft.Mashup.Container.Loader.exe' with command line '"C:\Program Files\Microsoft Office\root\Office16\ADDINS\Microsoft Power Query for Excel Integrated\bin\Microsoft.Mashup.Container.Loader.exe" 7500 7496 55fa64db-5ed7-48e2-abe7-922d863949ad 1 --logfile "C:\Users\rootuser\AppData\Local\Temp\PowerQuery\ContainerLogs\3245bbd1-f910-4d5c-9f82-b039c8f41324.log" '. 
+```
 
 
 An example of a setting in audit mode that would have caused an action to be blocked: 
 
-```Process '\Device\HarddiskVolume1\Windows\System32\svchost.exe' (PID 3668) would have been blocked from generating dynamic code.```
+```
+Process '\Device\HarddiskVolume1\Windows\System32\svchost.exe' (PID 3668) would have been blocked from generating dynamic code.
+```
 
 Note that the actual block log says ```was blocked from```, while the audit mode log says ```would have been blocked```
 
