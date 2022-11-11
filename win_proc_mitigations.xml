@@ -71,9 +71,6 @@
   <AppConfig Executable="cnfnot32.exe">
     <ASLR ForceRelocateImages="true" RequireInfo="false" />
   </AppConfig>
-  <AppConfig Executable="excel.exe">
-    <ASLR ForceRelocateImages="true" RequireInfo="false" />
-  </AppConfig>
   <AppConfig Executable="excelcnv.exe">
     <ASLR ForceRelocateImages="true" RequireInfo="false" />
   </AppConfig>
@@ -260,7 +257,7 @@
     <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
   </AppConfig>
   <AppConfig Executable="excel.exe">
-    <DEP Enable="true" EmulateAtlThunks="false" />
+    <DEP Enable="true" EmulateAtlThunks="true" />
     <ASLR ForceRelocateImages="true" RequireInfo="false" BottomUp="true" HighEntropy="true" />
     <StrictHandle Enable="true" />
     <ExtensionPoints DisableExtensionPoints="true" />
@@ -288,7 +285,7 @@
     <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
   </AppConfig>
   <AppConfig Executable="outlook.exe">
-    <DEP Enable="true" EmulateAtlThunks="false" />
+    <DEP Enable="true" EmulateAtlThunks="true" />
     <ASLR ForceRelocateImages="true" RequireInfo="false" BottomUp="true" HighEntropy="true" />
     <StrictHandle Enable="true" />
     <ExtensionPoints DisableExtensionPoints="true" />
@@ -300,6 +297,7 @@
     <SEHOP Enable="true" TelemetryOnly="false" />
     <Heap TerminateOnError="true" />
     <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
+    <UserShadowStack UserShadowStack="true" UserShadowStackStrictMode="false" AuditUserShadowStack="false" />
   </AppConfig>
   <AppConfig Executable="wordconv.exe">
     <ASLR ForceRelocateImages="true" RequireInfo="false" />
