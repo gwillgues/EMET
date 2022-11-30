@@ -1,5 +1,5 @@
 # EMET
-A list of Microsoft Enhanced Mitigation Experience Toolkit (EMET) related software/configurations, along with other notes
+A list of Microsoft Exploit Guard related software/configurations, along with other notes. Primarily process mitigation config.
 
 You can apply these settings to your Windows system by running the following commands, or by running the ```install.ps1``` script. Note that both require Administrator privileges.
 
@@ -10,14 +10,14 @@ Set-ProcessMitigation -PolicyFilePath "C:\Windows\Temp\win_proc_mitigations.xml"
 ```
 
 
-# Location of EMET Process Mitigation settings in Registry
+# Location of Process Mitigation settings in Registry
 The location of the Process Mitigation settings can be found at 
   ```HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\```
 There will be a list of sub-keys which are the name of the executables to have the mitigations applied. The actual mitigation settings are in a binary format. I still need to find what each component of the binary format actually signifies. 
 
 
-# EMET Auditing in Windows Event Log
-Actions blocked by EMET, or actions blocked only in audit mode (logs but doesn't actually block), can be found in the Windows Event Log. 
+# Process Mitigation Auditing in Windows Event Log
+Actions blocked by Exploit Guard Process Mitigations, or actions blocked only in audit mode (logs but doesn't actually block), can be found in the Windows Event Log. 
 
 The location of the logs is in the Event Log under ```Application and Services Log -> Microsoft -> Windows -> Security-Mitigations -> Kernel```
 
