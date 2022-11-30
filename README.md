@@ -1,4 +1,4 @@
-# EMET
+# Exploit Guard Process Mitigations (Windows)
 A list of Microsoft Exploit Guard related software/configurations, along with other notes. Primarily process mitigation config.
 
 You can apply these settings to your Windows system by running the following commands, or by running the ```install.ps1``` script. Note that both require Administrator privileges.
