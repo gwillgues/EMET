@@ -120,13 +120,35 @@
     <ASLR ForceRelocateImages="true" RequireInfo="false" />
   </AppConfig>
   <AppConfig Executable="iexplore.exe">
-    <ASLR ForceRelocateImages="true" RequireInfo="false" />
+    <DEP Enable="true" EmulateAtlThunks="true" />
+    <ASLR ForceRelocateImages="true" RequireInfo="false" BottomUp="true" HighEntropy="true" />
+    <StrictHandle Enable="true" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <ControlFlowGuard Enable="true" SuppressExports="false" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="true" Audit="false" AuditStoreSigned="false" EnforceModuleDependencySigning="true" />
+    <Fonts DisableNonSystemFonts="true" AuditOnly="false" Audit="false" />
+    <ImageLoad BlockRemoteImageLoads="true" AuditRemoteImageLoads="false" BlockLowLabelImageLoads="true" AuditLowLabelImageLoads="false" />
+    <Payload EnableExportAddressFilter="true" AuditEnableExportAddressFilter="false" EnableExportAddressFilterPlus="true" AuditEnableExportAddressFilterPlus="false" EnableImportAddressFilter="true" AuditEnableImportAddressFilter="false" EnableRopStackPivot="true" AuditEnableRopStackPivot="false" EnableRopCallerCheck="true" AuditEnableRopCallerCheck="false" EnableRopSimExec="true" AuditEnableRopSimExec="false" />
+    <SEHOP Enable="true" TelemetryOnly="false" />
+    <Heap TerminateOnError="true" />
+    <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
   </AppConfig>
   <AppConfig Executable="lync.exe">
     <ASLR ForceRelocateImages="true" RequireInfo="false" />
   </AppConfig>
   <AppConfig Executable="msaccess.exe">
-    <ASLR ForceRelocateImages="true" RequireInfo="false" />
+    <DEP Enable="true" EmulateAtlThunks="true" />
+    <ASLR ForceRelocateImages="true" RequireInfo="false" BottomUp="true" HighEntropy="true" />
+    <StrictHandle Enable="true" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <ControlFlowGuard Enable="true" SuppressExports="false" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="true" Audit="false" AuditStoreSigned="false" EnforceModuleDependencySigning="true" />
+    <Fonts DisableNonSystemFonts="true" AuditOnly="false" Audit="false" />
+    <ImageLoad BlockRemoteImageLoads="true" AuditRemoteImageLoads="false" BlockLowLabelImageLoads="true" AuditLowLabelImageLoads="false" />
+    <Payload EnableExportAddressFilter="true" AuditEnableExportAddressFilter="false" EnableExportAddressFilterPlus="true" AuditEnableExportAddressFilterPlus="false" EnableImportAddressFilter="true" AuditEnableImportAddressFilter="false" EnableRopStackPivot="true" AuditEnableRopStackPivot="false" EnableRopCallerCheck="true" AuditEnableRopCallerCheck="false" EnableRopSimExec="true" AuditEnableRopSimExec="false" />
+    <SEHOP Enable="true" TelemetryOnly="false" />
+    <Heap TerminateOnError="true" />
+    <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
   </AppConfig>
   <AppConfig Executable="mscorsvw.exe">
     <ExtensionPoints DisableExtensionPoints="true" />
@@ -167,7 +189,18 @@
     <ASLR ForceRelocateImages="true" RequireInfo="false" />
   </AppConfig>
   <AppConfig Executable="mspub.exe">
-    <ASLR ForceRelocateImages="true" RequireInfo="false" />
+    <DEP Enable="true" EmulateAtlThunks="true" />
+    <ASLR ForceRelocateImages="true" RequireInfo="false" BottomUp="true" HighEntropy="true" />
+    <StrictHandle Enable="true" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <ControlFlowGuard Enable="true" SuppressExports="false" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="true" Audit="false" AuditStoreSigned="false" EnforceModuleDependencySigning="true" />
+    <Fonts DisableNonSystemFonts="true" AuditOnly="false" Audit="false" />
+    <ImageLoad BlockRemoteImageLoads="true" AuditRemoteImageLoads="false" BlockLowLabelImageLoads="true" AuditLowLabelImageLoads="false" />
+    <Payload EnableExportAddressFilter="true" AuditEnableExportAddressFilter="false" EnableExportAddressFilterPlus="true" AuditEnableExportAddressFilterPlus="false" EnableImportAddressFilter="true" AuditEnableImportAddressFilter="false" EnableRopStackPivot="true" AuditEnableRopStackPivot="false" EnableRopCallerCheck="true" AuditEnableRopCallerCheck="false" EnableRopSimExec="true" AuditEnableRopSimExec="false" />
+    <SEHOP Enable="true" TelemetryOnly="false" />
+    <Heap TerminateOnError="true" />
+    <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
   </AppConfig>
   <AppConfig Executable="msqry32.exe">
     <ASLR ForceRelocateImages="true" RequireInfo="false" />
@@ -182,10 +215,32 @@
     <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
   </AppConfig>
   <AppConfig Executable="onenote.exe">
-    <ASLR ForceRelocateImages="true" RequireInfo="false" />
+    <DEP Enable="true" EmulateAtlThunks="true" />
+    <ASLR ForceRelocateImages="true" RequireInfo="false" BottomUp="true" HighEntropy="true" />
+    <StrictHandle Enable="true" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <ControlFlowGuard Enable="true" SuppressExports="false" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="true" Audit="false" AuditStoreSigned="false" EnforceModuleDependencySigning="true" />
+    <Fonts DisableNonSystemFonts="true" AuditOnly="false" Audit="false" />
+    <ImageLoad BlockRemoteImageLoads="true" AuditRemoteImageLoads="false" BlockLowLabelImageLoads="true" AuditLowLabelImageLoads="false" />
+    <Payload EnableExportAddressFilter="true" AuditEnableExportAddressFilter="false" EnableExportAddressFilterPlus="true" AuditEnableExportAddressFilterPlus="false" EnableImportAddressFilter="true" AuditEnableImportAddressFilter="false" EnableRopStackPivot="true" AuditEnableRopStackPivot="false" EnableRopCallerCheck="true" AuditEnableRopCallerCheck="false" EnableRopSimExec="true" AuditEnableRopSimExec="false" />
+    <SEHOP Enable="true" TelemetryOnly="false" />
+    <Heap TerminateOnError="true" />
+    <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
   </AppConfig>
   <AppConfig Executable="onenotem.exe">
-    <ASLR ForceRelocateImages="true" RequireInfo="false" />
+    <DEP Enable="true" EmulateAtlThunks="true" />
+    <ASLR ForceRelocateImages="true" RequireInfo="false" BottomUp="true" HighEntropy="true" />
+    <StrictHandle Enable="true" />
+    <ExtensionPoints DisableExtensionPoints="true" />
+    <ControlFlowGuard Enable="true" SuppressExports="false" />
+    <SignedBinaries MicrosoftSignedOnly="true" AllowStoreSignedBinaries="true" Audit="false" AuditStoreSigned="false" EnforceModuleDependencySigning="true" />
+    <Fonts DisableNonSystemFonts="true" AuditOnly="false" Audit="false" />
+    <ImageLoad BlockRemoteImageLoads="true" AuditRemoteImageLoads="false" BlockLowLabelImageLoads="true" AuditLowLabelImageLoads="false" />
+    <Payload EnableExportAddressFilter="true" AuditEnableExportAddressFilter="false" EnableExportAddressFilterPlus="true" AuditEnableExportAddressFilterPlus="false" EnableImportAddressFilter="true" AuditEnableImportAddressFilter="false" EnableRopStackPivot="true" AuditEnableRopStackPivot="false" EnableRopCallerCheck="true" AuditEnableRopCallerCheck="false" EnableRopSimExec="true" AuditEnableRopSimExec="false" />
+    <SEHOP Enable="true" TelemetryOnly="false" />
+    <Heap TerminateOnError="true" />
+    <ChildProcess DisallowChildProcessCreation="true" Audit="false" />
   </AppConfig>
   <AppConfig Executable="orgchart.exe">
     <ASLR ForceRelocateImages="true" RequireInfo="false" />
