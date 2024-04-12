@@ -4,7 +4,7 @@ A list of Microsoft Exploit Guard related software/configurations, along with ot
 You can apply these settings to your Windows system by running the following commands, or by running the ```install.ps1``` script. Note that both require Administrator privileges.
 
 ```
-(New-Object System.Net.WebClient).DownloadFile("https://github.com/gwillgues/EMET/raw/main/win_proc_mitigations.xml", "C:\Windows\Temp\win_proc_mitigations.xml")
+(New-Object System.Net.WebClient).DownloadFile("https://github.com/gwillgues/Exploit-Guard-Config/raw/main/win_proc_mitigations.xml", "C:\Windows\Temp\win_proc_mitigations.xml")
 
 Set-ProcessMitigation -PolicyFilePath "C:\Windows\Temp\win_proc_mitigations.xml"
 ```
